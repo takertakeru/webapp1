@@ -1,0 +1,40 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Takeru Profile</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+<center>
+    <body>
+        <img id="dokImg" src="img/dok.jpg" alt="Takeru" width="200" height="300">
+        <div id="myModal" class="modal">
+            <span style="font-family: Century Gothic; font-size: 25px;" class="close">Back</span>
+            <img class="modal-content" id="dokImg1">
+            <div id="caption"></div>
+        </div>
+        <h2>Takeru Banaybanay</h2>
+    </body>
+</center>
+</html>
+
+<script>
+    var modal = document.getElementById('myModal');
+
+    var img = document.getElementById('dokImg');
+    var modalImg = document.getElementById("dokImg1");
+    var captionText = document.getElementById("Caption");
+
+    img.onclick = function()
+    {
+        modal.style.display = "block";
+        modalImg.src = this.src;
+        modalImg.alt = this.alt;
+        captionText.innerHTML = this.alt;
+    }
+
+    var span = document.getElementsByClassName("close")[0];
+
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+</script>
